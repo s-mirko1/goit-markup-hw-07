@@ -1,0 +1,133 @@
+.site-nav {
+    background-color: var(--white-bgc);
+    display: flex;
+    align-items: center;
+}
+
+
+.logo {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--accent-color);
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 43px;
+}
+
+.site-nav-list {
+    margin: 0;
+    display: flex;
+    padding-left: 0;
+}
+
+.site-nav-item {
+    margin-left: 50px;
+}
+
+.site-nav-link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+    padding-top: 32px;
+    padding-bottom: 32px;
+    position: relative;
+    transition: 250ms var(--timing-function);
+}
+
+.site-nav-link.current::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+    left: 0;
+    bottom: -1px;
+    opacity: 0;
+
+}
+
+.site-nav-link:hover::after,
+.site-nav-link:focus::after {
+    opacity: 1;
+}
+
+
+.auth-nav-list {
+    margin: 0;
+    padding-left: 0;
+    display: flex;
+    margin-left: auto;
+
+}
+
+.auth-nav-link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--second-text-color);
+    margin-left: 50px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    transition: 250ms var(--timing-function);
+}
+
+
+.site-nav-link:hover,
+.site-nav-link:focus {
+    color: var(--accent-color);
+    outline: 0;
+
+}
+
+.auth-nav-link:hover,
+.auth-nav-link:focus {
+    fill: var(--accent-color);
+    outline: 0;
+}
+
+.site-nav .site-nav-link.current {
+    color: var(--accent-color);
+
+}
+
+.site-nav .site-nav-link.current::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+    left: 0;
+    bottom: -1px;
+    opacity: 1;
+
+}
+
+.auth-icon {
+    fill: var(--second-text-color);
+    margin-right: 10px;
+}
+
+
+
+.auth-nav-link:hover,
+.auth-nav-link:focus {
+    color: var(--accent-color);
+    outline: 0;
+    transition: 250ms var(--timing-function);
+}
+
+.auth-icon {
+    fill: currentColor;
+
+}
