@@ -10,6 +10,9 @@
     transform: translate(-50%, -50%) scale(1) rotate(0);
     transition: transform 250ms linear;
     padding: 40px;
+    .backdrop.is-hidden & {
+        transform: translate(-50%, -50%) scale(0) rotate(-180deg);
+    }
 }
 
 .modal-close {
@@ -28,6 +31,11 @@
     position: absolute;
     top: 8px;
     right: 8px;
+    .modal-close:hover & {
+        fill: var(--accent-color);
+        cursor: pointer;
+
+    }
 }
 
 .modal-title {
@@ -66,26 +74,16 @@
 
 .modal-close {
     transition: transform 250ms linear;
+    &:hover {
+        fill: var(--accent-color);
+        cursor: pointer;
+    }
 }
 
-.modal-close:hover .modal-icon {
-    fill: var(--accent-color);
-    cursor: pointer;
 
-}
 
-.modal-close:hover {
-    fill: var(--accent-color);
-    cursor: pointer;
-}
 
-.modal-text::placeholder {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
-    letter-spacing: 0.01em;
-    color: rgba(117, 117, 117, 0.5);
-}
+
 
 .modal-text {
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -99,4 +97,11 @@
     line-height: 1.16;
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
+    &::placeholder {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+    }
 }

@@ -4,6 +4,9 @@
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     padding-left: 42px;
+    &:focus {
+        outline-color: var(--accent-color);
+    }
 }
 
 
@@ -45,19 +48,17 @@
     left: 15px;
     top: 50%;
     transform: translateY(-50%);
+    .form-input:focus+& {
+        fill: var(--accent-color);
+    }
 }
 
 .input-wrap {
     position: relative;
 }
 
-.form-input:focus {
-    outline-color: var(--accent-color);
-}
 
-.form-input:focus+.input-icon {
-    fill: var(--accent-color);
-}
+
 
 .check-text {
     font-weight: 400;
@@ -69,35 +70,37 @@
     align-items: center;
     justify-content: center;
     margin-top: 20px;
+    & span {
+        width: 16px;
+        height: 15px;
+        border: 2px solid var(--primary-text-color);
+        border-radius: 2px;
+        margin-right: 7px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 250ms linear, border-color 250ms linear;
+        .input-check:focus+.check-text & {
+            border-color: var(--accent-color);
+        }
+        .input-check:checked+.check-text & {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            fill: #FFFFFF;
+        }
+}
 }
 
-.check-text span {
-    width: 16px;
-    height: 15px;
-    border: 2px solid var(--primary-text-color);
-    border-radius: 2px;
-    margin-right: 7px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 250ms linear, border-color 250ms linear;
-}
+
 
 .check-icon {
     fill: transparent;
     transition: fill 250ms linear;
+    .input-check:checked+.check-text & {
+        fill: #FFFFFF;
+    }
 }
 
-.input-check:checked+.check-text span {
-    background-color: var(--accent-color);
-    border-color: var(--accent-color);
-    fill: #FFFFFF;
-}
 
-.input-check:focus+.check-text span {
-    border-color: var(--accent-color);
-}
 
-.input-check:checked+.check-text .check-icon {
-    fill: #FFFFFF;
-}
+

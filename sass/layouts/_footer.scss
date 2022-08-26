@@ -46,13 +46,13 @@
     letter-spacing: 0.03em;
     color: var(--footer-text-color);
     transition: 250ms var(--timing-function);
+    &:hover,
+    &k:focus {
+        color: var(--accent-color);
+        outline: 0;
+    }
 }
 
-.adress-item-link:hover,
-.adress-item-link:focus {
-    color: var(--accent-color);
-    outline: 0;
-}
 
 
 .footer-container {
@@ -92,22 +92,24 @@
     align-items: center;
     justify-content: center;
     transition: 250ms var(--timing-function);
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+        outline: 0;
+    }
 }
 
 .contacts-soc-icon {
     fill: var(--white-color);
+    .contacts-soc-link:hover &,
+    .contacts-soc-link:focus & {
+        fill: var(--white-color);
+        outline: 0;
+    }
 }
 
-.contacts-soc-link:hover,
-.contacts-soc-link:focus {
-    background-color: var(--accent-color);
-    outline: 0;
-}
 
-.contacts-soc-link:hover .contacts-soc-icon,
-.contacts-soc-link:focus .contacts-soc-icon {
-    fill: var(--white-color);
-    outline: 0;
-}
+
+
 
 .footer-box-second {}

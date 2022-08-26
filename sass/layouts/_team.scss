@@ -65,20 +65,22 @@
     align-items: center;
     justify-content: center;
     transition: 250ms var(--timing-function);
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+        outline: 0;
+    }
 }
 
-.team-soc-link:hover,
-.team-soc-link:focus {
-    background-color: var(--accent-color);
-    outline: 0;
-}
 
-.team-soc-link:hover .team-soc-icon,
-.team-soc-link:focus .team-soc-icon {
-    fill: var(--white-color);
-    outline: 0;
-}
+
+
 
 .team-soc-icon {
     fill: var(--fill-color-icons);
+    .team-soc-link:hover &,
+    .team-soc-link:focus & {
+        fill: var(--white-color);
+        outline: 0;
+    }
 }
