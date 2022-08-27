@@ -35,7 +35,6 @@ img {
 }
 
 header .container {
-    display: flex;
-    align-items: center;
+    @extend %align-list;
 
 }

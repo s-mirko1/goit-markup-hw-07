@@ -26,8 +26,7 @@
     height: 92px;
     border: 1px solid #AFB1B8;
     border-radius: 5px;
-    display: flex;
-    align-items: center;
+    @extend %align-list;
     justify-content: center;
     transition: 250ms var(--timing-function);
     &:hover,
